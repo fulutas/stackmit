@@ -1,4 +1,4 @@
-# Stackmit
+# Stackmit - Bulk Git Commit Tool
 
 🚀 A simple tool to analyze, commit, and push changes across multiple Git repositories.  
 Perfect for managing microservices, monorepos, or grouped Git projects.
