@@ -1,0 +1,32 @@
+{
+  "name": "stackmit",
+  "version": "1.0.0",
+  "description": "Bulk Git Commit Tool",
+  "main": "main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.stackmit.app",
+    "productName": "Stackmit - Bulk Git Commit Tool",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "dependencies": {
+  }
+}

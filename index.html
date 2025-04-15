@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stackmit - Bulk Git Commit Tool</title>
+  <link rel="stylesheet" href="client/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="page-title">Stackmit - Bulk Git Commit Tool</h1>
+    </header>
+
+    <div class="controls">
+      <button id="selectDirs" class="btn primary">Select Project Folders</button>
+    </div>
+
+    <div id="directories-container" class="directories-container">
+      <h2>Project Directories</h2>
+
+      <!-- Search -->
+      <div class="search-container">
+        <input type="text" id="projectSearch" placeholder="Search..." class="search-input">
+        <div class="search-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Filters-->
+      <div class="filter-options">
+        <label class="filter-label">
+          <input type="checkbox" id="showChangesOnly" class="filter-checkbox">
+          <span class="filter-text">Show the ones with changes</span>
+        </label>
+      </div>
+
+      <div id="directories-list" class="directories-list"></div>
+    </div>
+
+    <div class="commit-container" id="commit-container" style="display: none;">
+      <h2>Commit</h2>
+      <textarea id="commitMessage" placeholder="Commit message..." rows="3"></textarea>
+      <button id="commitBtn" class="btn primary">Commit and Push!</button>
+    </div>
+
+    <!-- Commit Modal -->
+    <div id="commitModal" class="modal">
+      <div class="modal-wrapper">
+        <div class="modal-header">
+          <span class="close-button">&times;</span>
+          <h2>Changes</h2>
+        </div>
+        <div class="modal-content"></div>
+      </div>
+    </div>
+
+    <!-- Git Init Modal -->
+    <div id="gitInitModal" class="modal">
+      <div class="modal-wrapper">
+        <span class="close-button gitInitClose">&times;</span>
+        <h2>Git Start</h2>
+        <div id="gitInitContent">
+          <p id="gitInitProjectName"></p>
+          <div class="form-group">
+            <label for="remoteUrl">Git Remote URL:</label>
+            <input type="text" id="remoteUrl" placeholder="https://github.com/kullanici/repo.git">
+          </div>
+          <button id="initGitBtn" class="btn primary">Git Start</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal">
+      <div class="modal-wrapper">
+        <span class="close-button resultsClose">&times;</span>
+        <h2>Transaction Results</h2>
+        <div id="resultsContent"></div>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="version"></div>
+      <a href="https://github.com/fulutas/stackmit" target="_blank">Github</a>
+    </footer>
+  </div>
+
+  <script src="client/renderer.js"></script>
+</body>
+
+</html>
