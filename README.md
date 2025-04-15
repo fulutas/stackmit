@@ -5,7 +5,7 @@ Perfect for managing microservices, monorepos, or grouped Git projects.
 
 ## Overview
 
-**Stackmit** is a Node.js-based CLI application that helps you:
+**Stackmit** is a Node.js-based electron application that helps you:
 
 - 🔍 Detect Git changes across multiple project folders
 - ✅ Stage and commit changes with a custom message
